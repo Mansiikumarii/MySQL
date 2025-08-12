@@ -1,0 +1,31 @@
+SELECT * FROM worker
+WHERE SALARY > 100000;
+
+
+SELECT FIRST_NAME, SALARY from worker;
+SELECT 44+11;
+SELECT now();
+
+SELECT lcase('MANSI');
+SELECT ucase('mansi');
+
+SELECT * FROM worker
+WHERE DEPARTMENT = 'HR';
+
+# salary [80000, 300000] 
+SELECT * FROM worker
+WHERE SALARY BETWEEN 80000 AND 300000;
+
+#reduce OR statement
+#HR,ADMIN
+SELECT *  FROM worker
+WHERE DEPARTMENT = 'HR' OR DEPARTMENT = 'ADMIN';
+
+#Better way : IN
+SELECT * FROM worker
+WHERE DEPARTMENT IN ('HR', 'ADMIN', 'Finance');
+
+SELECT * FROM worker
+WHERE DEPARTMENT NOT IN ('HR', 'ADMIN', 'Finance');
+
+
