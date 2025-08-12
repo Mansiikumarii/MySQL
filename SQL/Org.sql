@@ -1,7 +1,7 @@
-CREATE DATABASE ORG;
-SHOW DATABASES;
-USE ORG;
+CREATE DATABASE IF NOT EXISTS ORG1;
+USE ORG1;
 
+DROP TABLE IF EXISTS Worker;
 CREATE TABLE Worker(
     WORKER_ID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     FIRST_NAME VARCHAR(25),
@@ -11,39 +11,46 @@ CREATE TABLE Worker(
     DEPARTMENT VARCHAR(25)
 );
 
-INSERT INTO worker
+INSERT INTO Worker
 (WORKER_ID, FIRST_NAME, LAST_NAME, SALARY, JOINING_DATE, DEPARTMENT) VALUES
-(001,'Prince','Jain',100000,'16-08-04 09.00.00','IT'),
-(002,'Arushi','Lath',80000,'15-12-03 09.00.00','Admin'),
-(003,'Saloni','Aggrawal',100000,'14-02-20 09.00.00','HR'),
-(004, 'Amulya','Jef',500000,'28-08-04 09.00.00','Finance'),
-(005,'Rupali','Tanwar',500000,'16-08-04 09.00.00','Accounts'),
-(006,'Anshul','Jain',200000,'16-08-04 09.00.00','Admin'),
-(007,'Kumkum','Tripathi',750000,'16-12-04 09.00.00','Finance'),
-(008,'Lakshay','Mittle',900000,'16-08-04 09.00.00','IT');
+(1,'Prince','Jain',100000,'2016-08-04 09:00:00','IT'),
+(2,'Arushi','Lath',80000,'2015-12-03 09:00:00','Admin'),
+(3,'Saloni','Aggrawal',100000,'2014-02-20 09:00:00','HR'),
+(4,'Amulya','Jef',500000,'2028-08-04 09:00:00','Finance'),
+(5,'Rupali','Tanwar',500000,'2016-08-04 09:00:00','Accounts'),
+(6,'Anshul','Jain',200000,'2016-08-04 09:00:00','Admin'),
+(7,'Kumkum','Tripathi',750000,'2016-12-04 09:00:00','Finance'),
+(8,'Lakshay','Mittle',900000,'2016-08-04 09:00:00','IT');
 
-SELECT * FROM worker;
+DROP TABLE IF EXISTS Bonus;
+CREATE TABLE Bonus (
+    WORKER_REF_ID INT,
+    BONUS_AMOUNT INT,
+    BONUS_DATE DATETIME,
+    FOREIGN KEY (WORKER_REF_ID) REFERENCES Worker(WORKER_ID)
+);
 
 INSERT INTO Bonus
 (WORKER_REF_ID, BONUS_AMOUNT, BONUS_DATE) VALUES
-(001, 5000, '16-02-20'),
-(002, 3000, '16-06-11'),
-(003, 7000, '16-02-20'),
-(004, 10000, '16-02-20'),
-(005, 8000, '16-06-11');
+(1, 5000, '2016-02-20'),
+(2, 3000, '2016-06-11'),
+(3, 7000, '2016-02-20'),
+(4, 10000, '2016-02-20'),
+(5, 8000, '2016-06-11');
 
+DROP TABLE IF EXISTS Title;
 CREATE TABLE Title (
     WORKER_REF_ID INT,
     WORKER_TITLE VARCHAR(50),
     AFFECTED_FROM DATETIME
 );
+
 INSERT INTO Title
 (WORKER_REF_ID, WORKER_TITLE, AFFECTED_FROM) VALUES
-(001, 'Manager', '2016-02-20 00:00:00'),
-(002, 'Executive', '2016-06-11 00:00:00'),
-(008, 'Senior Manager', '2016-06-11 00:00:00'),
-(005, 'Ass. Manager', '2016-06-11 00:00:00'),
-(004, 'Senior Executive', '16-06-11 00:00:00'),
-(007,'Lead','2016-06-11 00:00:00'),
-(003,'Lead','2016-06-11 00:00:00');
-
+(1, 'Manager', '2016-02-20 00:00:00'),
+(2, 'Executive', '2016-06-11 00:00:00'),
+(8, 'Senior Manager', '2016-06-11 00:00:00'),
+(5, 'Ass. Manager', '2016-06-11 00:00:00'),
+(4, 'Senior Executive', '2016-06-11 00:00:00'),
+(7, 'Lead', '2016-06-11 00:00:00'),
+(3, 'Lead', '2016-06-11 00:00:00');
