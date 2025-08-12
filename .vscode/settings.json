@@ -12,7 +12,7 @@
             "name": "MySQL Local",
             "database": "mansidb",
             "username": "root",
-            "password": "M@n$!kum12",
+            "password": "",
             "connectionTimeout": 30
         }
     ]
