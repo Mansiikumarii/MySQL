@@ -33,3 +33,12 @@ VALUES(1251,'Priyanshi','Ok elevator','F',302021,'Jaipur'),
 
 INSERT INTO customer
 VALUES(1252,'Kinjal','Kanpur','F',208001,'UP');
+
+use temp;
+
+CREATE TABLE Order_details(
+    Order_id INT PRIMARY KEY,
+    delivery_date DATE,
+    cust_id INT,
+    FOREIGN KEY (cust_id) REFERENCES Customer(id)
+);

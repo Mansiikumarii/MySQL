@@ -28,4 +28,32 @@ WHERE DEPARTMENT IN ('HR', 'ADMIN', 'Finance');
 SELECT * FROM worker
 WHERE DEPARTMENT NOT IN ('HR', 'ADMIN', 'Finance');
 
+#wildcard
+SELECT * from worker
+WHERE FIRST_NAME LIKE 'a%';
 
+#sorting using order by
+SELECT * from worker
+order by salary ;
+
+# DISTINCT
+SELECT DISTINCT DEPARTMENT from worker;
+
+#Group by
+SELECT DEPARTMENT, count(*) from worker Group by DEPARTMENT;
+
+#aveg salary per DEPARTMENT
+SELECT DEPARTMENT, AVG(SALARY) from worker
+GROUP BY DEPARTMENT;
+
+#MINIMUM
+SELECT DEPARTMENT, MIN(SALARY) from worker
+GROUP BY DEPARTMENT;
+
+#MAXIMUM
+SELECT DEPARTMENT, MAX(SALARY), sum(salary) from worker
+GROUP BY DEPARTMENT;
+
+#Group by with having
+SELECT DEPARTMENT, count(DEPARTMENT) from worker GROUP BY DEPARTMENT
+HAVING count(DEPARTMENT) > 2;
