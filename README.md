@@ -1,25 +1,29 @@
-🐬 MySQL Mastery by Mansiikumarii
-Welcome to my MySQL learning lab! This repo is a curated collection of SQL scripts where I explore the fundamentals and power of MySQL. Whether you're new to databases or brushing up your skills — there's something here for you! 🚀
+# 🐬 MySQL Playground by Mansiikumarii
 
-📁 What's Inside
-DDL.sql – Build your database structure (CREATE, ALTER, DROP)
+Welcome to my **MySQL Playground** — a curated collection of SQL scripts, queries, and examples designed to explore, learn, and master the fundamentals of relational databases.
 
-DML.sql – Play with data (INSERT, UPDATE, DELETE)
+## 📁 What's Inside?
 
-DRL.sql – Fetch data like a pro (SELECT, JOIN, WHERE)
+| File / Folder           | Description                                           |
+| ----------------------- | ----------------------------------------------------- |
+| `DDL.sql`               | Create the skeleton 🦴 — Tables, Schemas & Structures |
+| `DML.sql`               | Bring in the data 🎯 — Insert, Update, Delete         |
+| `DRL.sql`               | Query like a pro 🔍 — SELECT statements and more      |
+| `Customer.sql`          | Dive into customer data 💼                            |
+| `Org.sql`               | Explore organizational structure 🏢                   |
+| `Sub Querey/`           | Get nested 🪆 — Practice with subqueries              |
+| `Set Operations/`       | Union, Intersect, Except — all the set magic 🔗       |
+| `.vscode/settings.json` | Editor settings for smooth sailing ⚙️                 |
 
-Customer.sql – Customer table scripts for real-world scenarios
+## 🌟 Why This Exists
 
-Org.sql – Organizational data models
+This repo is my personal space to experiment with SQL concepts, prep for interviews, and share insights with fellow learners. Whether you're just starting out or need a refresher — feel free to fork and explore!
 
-temp.sql – Experiments & trials
+---
 
-MySQL Local.session.sql – Local session info 
+Happy querying!
+**\~ Mansiikumarii**
 
-💡 Why This Repo?
-To document, practice, and share MySQL knowledge in a simple and structured way. Learning is better when shared!
+---
 
-🛠️ Feel free to fork, clone, or star if you find it helpful!
-
-Happy Querying! ✨
-~ Mansiikumarii
+Would you like to include badges, visuals, or a demo section as well?
