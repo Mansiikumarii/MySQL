@@ -1,7 +1,9 @@
 # 🐬 MySQL Playground by Mansiikumarii
 
 Welcome to my **MySQL Playground** — a curated collection of SQL scripts, queries, and examples designed to explore, learn, and master the fundamentals of relational databases.
-
+![Build Status](https://img.shields.io/badge/status-active-brightgreen?style=flat-square)
+![SQL](https://img.shields.io/badge/language-SQL-blue?style=flat-square)
+![Contributions Welcome](https://img.shields.io/badge/contributions-welcome-orange?style=flat-square)
 ## 📁 What's Inside?
 
 | File / Folder           | Description                                           |
