@@ -23,7 +23,3 @@ This repo is my personal space to experiment with SQL concepts, prep for intervi
 
 Happy querying!
 **\~ Mansiikumarii**
-
----
-
-Would you like to include badges, visuals, or a demo section as well?
